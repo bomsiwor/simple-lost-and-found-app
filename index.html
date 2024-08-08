@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <h1 id="heading">Lost and Found</h1>
+
+    <!-- Form -->
+    <form action="/" id="lost-form">
+      <div>
+        <span>Nama</span>
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <div>
+        <span>Time Lost</span>
+        <input type="date" name="time" id="time" />
+      </div>
+
+      <div>
+        <span>Found?</span>
+        <input type="checkbox" name="found" id="found" />
+      </div>
+
+      <div>
+        <span>Tell ur story</span>
+        <textarea name="chronology" id="chronology"></textarea>
+      </div>
+
+      <div>
+        <span>Last Seen Location</span>
+        <input type="text" name="location" id="location" />
+      </div>
+
+      <div>
+        <span>BelongsTo</span>
+        <input type="text" name="owner" id="owner" />
+      </div>
+
+      <div>
+        <span>Contact</span>
+        <input type="text" name="contact" id="contact" />
+      </div>
+
+      <button type="submit">Post!</button>
+    </form>
+    <!-- Data -->
+    <div id="list-container"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
