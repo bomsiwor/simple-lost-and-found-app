@@ -176,3 +176,9 @@ h2.lost-name {
   max-height: inherit;
   overflow: scroll;
 }
+
+#cloud-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
