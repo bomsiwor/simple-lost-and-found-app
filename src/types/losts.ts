@@ -7,12 +7,13 @@ export interface IData {
     owner: string;
     owner_contact: string;
     user: string;
+    user_id: string;
     _id?: string;
 }
 
 export type TDataList = Pick<
     IData,
-    "name" | "found" | "age" | "last_seen_location" | "_id"
+    "name" | "found" | "age" | "last_seen_location" | "_id" | "user_id"
 >[]
 
 export type TDataPayloadStore = Omit<

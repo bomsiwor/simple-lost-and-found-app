@@ -3,7 +3,8 @@ let baseUrl: string = "https://v1.appbackend.io/v1/rows/JsSB7BquWwxV";
 export default async function fetchData<T>(
     method: RequestInit["method"],
     body?: RequestInit["body"],
-    query?: Record<string, string>
+    query?: Record<string, string> | null,
+    pathVar?: string | null,
 ) {
     try {
         // Construct metadata
@@ -12,6 +13,10 @@ export default async function fetchData<T>(
             headers: {
                 "Content-Type": "application/json"
             },
+        }
+
+        if (pathVar) {
+            baseUrl += `/${pathVar}`;
         }
 
         // If request has body
