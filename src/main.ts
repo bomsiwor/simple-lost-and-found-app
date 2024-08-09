@@ -12,7 +12,7 @@ const userForm = document.getElementById("user-form");
 
 const form = document.getElementById("lost-form");
 
-const typed = new Typed("#heading", {
+new Typed("#heading", {
   strings: ["Get ur beloved stuff back", "Lost <s>and found</s>", "..."],
   typeSpeed: 50,
   backSpeed: 100,
@@ -185,7 +185,7 @@ form?.addEventListener("submit", async function (e) {
   }
 });
 
-const handleDetail = (id: string) => async (e: MouseEvent) => {
+const handleDetail = (id: string) => async () => {
   try {
     const response = await fetchData<entity.IData[]>("GET", null, null, id);
 
@@ -219,7 +219,7 @@ const handleDetail = (id: string) => async (e: MouseEvent) => {
 }
 
 // Delete data
-const handleDelete = (id: string) => (e: MouseEvent) => {
+const handleDelete = (id: string) => () => {
   try {
     fetchData("DELETE", JSON.stringify([id]));
   } catch (error) {
